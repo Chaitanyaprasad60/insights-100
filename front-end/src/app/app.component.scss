@@ -1,0 +1,14 @@
+mat-toolbar {
+    position: relative; // Added this to add z-index 
+    z-index: 5; // Added this as sidenav was covering the shadow of toolbar. 
+    height: 8vh;
+}
+
+mat-sidenav-container {
+    height: 92vh;
+}
+
+
+mat-sidenav {
+    width: 25vw;
+}
