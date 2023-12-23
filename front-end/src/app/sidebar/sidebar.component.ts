@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 export type menuItem = {
@@ -19,6 +19,8 @@ export class SidebarComponent implements OnInit {
       {"icon":"analytics","name":"Analytics",route:""},
       {"icon":"person","name":"Users",route:""}
     ]
+
+    @Input() menuState:boolean = true;
   
 
 

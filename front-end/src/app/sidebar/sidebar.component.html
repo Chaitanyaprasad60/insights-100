@@ -9,7 +9,7 @@
     <mat-nav-list>
         <a mat-list-item *ngFor="let item of menuList">
             <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
-            <span matListItemTitle>{{item.name}}</span>
+            <span *ngIf="menuState" matListItemTitle>{{item.name}}</span>
         </a>
     </mat-nav-list>
 </ul>

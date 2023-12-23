@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'front-end';
+  menuState = true; // false - Short side menu, true - wide side menu 
+
+
+  changeSideMenuState(){
+    console.log("HERE");
+    console.log(this.menuState);
+    this.menuState = !this.menuState;
+  }
 }

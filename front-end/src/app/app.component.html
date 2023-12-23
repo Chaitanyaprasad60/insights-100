@@ -1,12 +1,12 @@
 <mat-toolbar class="mat-elevation-z3">
-    <button mat-icon-button>
+    <button mat-icon-button (click)="changeSideMenuState()">
         <mat-icon>menu</mat-icon>
     </button>
 </mat-toolbar>
 
-<mat-sidenav-container> <!-- This Represent the whole page below the toolbar -->
-    <mat-sidenav opened mode="side"> <!-- This has the Side Bar Content. This will no be visible as its default state is closed -->
-       <app-sidebar></app-sidebar>                      <!-- there are three modes side, over, push -->
+<mat-sidenav-container > <!-- This Represent the whole page below the toolbar -->
+    <mat-sidenav opened mode="side" [ngStyle]="{'width': menuState ? '15vw' : '5vw'}" > <!-- This has the Side Bar Content. This will no be visible as its default state is closed -->
+       <app-sidebar [menuState]="menuState"></app-sidebar>     <!-- there are three modes side, over, push -->
     </mat-sidenav>
     <mat-sidenav-content> <!-- This has the page Content -->
         Hello
